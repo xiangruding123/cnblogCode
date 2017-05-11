@@ -4,6 +4,10 @@
 		<meta charset="UTF-8">
 		<title>123基本的居中方法</title>
 		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
 			/*1/img设置成block，计算margin的值*/
 			.imgjuzhong{
 				width: 400px;
@@ -41,6 +45,14 @@
 				background: darkcyan url(img/xmn3.jpg) no-repeat center center;
 				background-size: 50% 50%;
 			}
+			
+			.imgjuzhong4{
+				width:200px;
+				height:200px;
+				/*margin: 0 auto;*/
+				background: darkcyan url(img/xmn3.jpg) no-repeat center;
+				background-size: 50% 50%;
+			}
 		</style>
 	</head>
 	<body>
@@ -54,6 +66,8 @@
 		</div>
 		
 		<div class="imgjuzhong3"></div>
+		
+		<div class="imgjuzhong4"></div>
 		
 	</body>
 </html>
