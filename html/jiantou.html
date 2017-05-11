@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.demo{
+				list-style: none;
+				width: 100px;
+				height: 100px;
+				background: magenta;
+				box-shadow: -15px 0 5px -5px green, /*左边阴影*/
+				0 -15px 5px -5px blue, /*顶部阴影*/
+				0 15px 5px -5px red, /*底部阴影*/
+				15px 0 5px -5px yellow; /*右边阴影*/
+			}
+			.modal-body{
+				height: 50px;
+				width: 200px;
+				border: 1px solid #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="demo"></li>
+		</ul>
+		<div class="modal-body">
+			你好呢你好呢你好呢你好呢你好呢
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		var data={
+			"show_in_list": 1,
+			"enums": [
+				{
+				"value": "B2B",
+				"key": "1"
+				},
+				{
+				"value": "B2B",
+				"key": "1"
+				},
+				{
+				"value": "C2C",
+				"key": "1"
+				}
+			],
+			"key": "PK",
+			"field_name": "主键ID",
+			"desc": "",
+			"column": "id",
+			"type": "INT(10)"
+			}
+		console.log(data.key);
+		console.log(data['field_name']);
+		
+		//点击div全选中div里面的文字, 点击div取消全选div里面的文字
+		$('.modal-body').click(function(){
+			var text=this;
+			if(window.getSelection().toString().length>0){
+				return false;
+			}else{
+				//console.log(888);
+				if (document.body.createTextRange) {
+					var range = document.body.createTextRange();
+					range.moveToElementText(text);
+					range.select();
+				} else if (window.getSelection) {
+					var selection = window.getSelection();
+					var range = document.createRange();
+					range.selectNodeContents(text);
+					selection.removeAllRanges();
+					selection.addRange(range);
+				} else {
+					alert("none");
+				}
+			}
+		})
+		
+		
+	</script>
+</html>
