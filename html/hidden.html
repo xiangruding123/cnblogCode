@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css的四种隐藏方式</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				position: relative;
+			}
+			#div1{
+				width: 400px;
+				height: 200px;
+				background: aqua;
+				border: 1px solid red;
+			}
+			#div4{
+				position: absolute;
+				top:-9999px;
+				left:-9999px;
+				width:200px;
+				height:200px;
+				background: magenta;
+				border:1px solid mediumblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<p>1. opacity:0只是把元素隐藏起来了 ，但是还是占有布局，所以还是对布局有影响</p>
+			<p>2. visibility:hidden还是只是把元素隐藏了，但是还是占有布局</p>
+			<p>3.display:none不会影响到布局</p>
+		</div>
+		<p>4.position:absolute不会影响到布局,是使用的定位把它移走的</p>
+		<div id="div4">这个是第四个div 我觉得也不会影响到布局 但是到底会不会 一起来看看吧 果然这个也不会影响到布局 </div>
+		<p>看看</p>
+	</body>
+</html>

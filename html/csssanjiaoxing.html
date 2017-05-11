@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用css 制作三角</title>
+		<style type="text/css">
+			.div{
+				border-top:40px solid #ff0077;
+				border-left:40px solid #004444;
+				border-bottom:40px solid #999999;
+				border-right:40px solid #333333;
+				height: 0px;
+				width: 0px;
+			}
+			/*======*/
+			.triggle-top,.triggle-left,.triggle-bottom,.triggle-right{
+				border:100px solid transparent;
+				height: 0;
+				width: 0;
+			}
+			.triggle-top{
+				border-top-color:#ff0077;
+			}
+			.triggle-left{
+				border-left-color:#004444;
+			}
+			.triggle-bottom{
+				border-bottom-color:#999999;
+			}
+			.triggle-right{
+				border-right-color: #333333;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="div"></div>
+		<p>现在一个一个分解出来</p>
+		<hr />
+		<p>triggle-top</p>
+		<div class="triggle-top"></div>
+		<hr />
+		<p>triggle-right</p>
+		<div class="triggle-right"></div>
+		<hr />
+		<p>triggle-bottom</p>
+		<div class="triggle-bottom"></div>
+		<hr />
+		<p>triggle-left</p>
+		<div class="triggle-left"></div>
+	</body>
+</html>

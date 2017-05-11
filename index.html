@@ -2,8 +2,58 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>123基本的居中方法</title>
+		<style type="text/css">
+			/*1/img设置成block，计算margin的值*/
+			.imgjuzhong{
+				width: 400px;
+				height: 400px;
+				background: magenta;
+			}
+			.imgjuzhong img{
+				width: 350px;
+				height: 350px;
+				display: block;
+				margin: 0 auto;
+				padding-top: 25px;
+			}
+			/*====display:table-cell;====*/
+			.imgjuzhong2{
+				width:200px;
+				height:200px;
+				display:table-cell;
+				vertical-align:middle;
+				text-align:center;
+				background: aqua;
+			}
+			.imgjuzhong2 img{
+				width: 150px;
+				height: 150px;
+				vertical-align:middle;
+			}
+			/*=========*/
+			.imgjuzhong3{
+				width:200px;
+				height:200px;
+				display:table-cell;
+				vertical-align:middle;
+				text-align:center;
+				background: darkcyan url(img/xmn3.jpg) no-repeat center center;
+				background-size: 50% 50%;
+			}
+		</style>
 	</head>
 	<body>
+		<!--img在div里面水平垂直居中<div><img/></div>-->
+		<div class="imgjuzhong">
+			<img src="img/xmn2.jpg"/>
+		</div>
+		<!--设置为display:table-cell;使用vertical-align:middle;实现居中-->
+		<div class="imgjuzhong2">
+			<img src="img/xmn1.jpg"/>
+		</div>
+		
+		<div class="imgjuzhong3"></div>
+		
 	</body>
 </html>
