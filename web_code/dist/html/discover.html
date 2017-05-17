@@ -1,0 +1,7 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>发现</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta http-equiv="Cache-Control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><link rel="stylesheet" href="../css/discover.css"></head><body><div class="container" id="discover"><section><header class="fh-header"><h1 class="header-title">发现</h1></header><img src="../img/img3.png" class="img-list"><section id="discover_list"></section><script id="discoverList" type="text/html"> <%for(var i=0;i<result.length;i++){%> <p class="dis-title"><%=result[i].sc_name%></p>
+				        <ul class="discover"> <%for(var j=0;j<result[i].subclass.length;j++){%> <a href="discover_list.html?cid=<%=result[i].subclass[j].sc_id%>&sc_name=<%=result[i].subclass[j].sc_name%>">
+				                <li>
+			                    	<img src="<%=result[i].subclass[j].sc_pic%>" data-original="<%=result[i].subclass[j].sc_pic%>">
+			                        <h4 class="f14"><%=result[i].subclass[j].sc_name%></h4>
+				                </li>
+				                </a> <%}%> </ul> <%}%> </script></section></div><script src="../js/tmpl/rem.js"></script><script src="../js/tmpl/jquery-2.1.0.js"></script><script src="../js/config.js"></script><script src="../js/common.js"></script><script src="../js/tmpl/template.js"></script><script src="../js/discover.js"></script></body></html>

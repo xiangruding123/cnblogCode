@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分红全球购</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="description" content="分红全球购——中国跨境直购平台！众享全球尖货，分销享分红，正品、低价、海外直邮！"/>
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style type="text/css">
+			
+		</style>
+	</head>
+	<body class="pobody">
+		<header class="fh-header">header</header>
+		<section class="seccontent">
+			<ul class="seccontentul">
+				<script type="text/html" id="index-tpl">
+					<!--pinpaiguan-->
+					<%for(var i=0;i<result.goods_list.length;i++){%>
+						<li class="seccontentli">
+							<dl class="seccontentdl">
+								<dt class="seccontentdt"><img src="<%=result.goods_list[i].product_img_url%>"/></dt>
+								<dd class="seccontentdd"><%=result.goods_list[i].product_name%></dd>
+							</dl>
+						</li>
+					<%}%>
+				</script>
+			</ul>
+		</section>
+		<footer class="fh-footer">footer</footer>
+	</body>
+	<script src="js/tmpl/rem.js"></script>
+	<script src="js/tmpl/jquery-2.1.0.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/tmpl/template.js"></script>
+	<script src="js/index.js"></script>
+</html>
