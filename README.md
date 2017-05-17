@@ -8,7 +8,7 @@
 更于-20170517
 我的blog代码-gulp（基础篇）
 [gulp（基础篇）](http://www.cnblogs.com/xiangru0921/p/6863322.html)
-
+(这好似第一次执行gulp时候的得代码！  之后的代码在E：盘中。自己留意一下！！)
 
 
 
